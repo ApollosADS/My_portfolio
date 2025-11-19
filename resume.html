@@ -25,24 +25,29 @@
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Apollos U. ADINSI</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="resume.html">Parcours</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand fw-bold" href="index.html">Apollos U. ADINSI</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+                            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 active" href="resume.html">Parcours</a></li>
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projets</a></li>
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <!-- Espace pour la navigation fixe -->
+            <div class="nav-spacer"></div>
             <!-- Page Content-->
             <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mon parcours</span></h1>
+                <div class="text-center mb-4">
+                    <h1 class="display-6 fw-bolder mb-0"><span class="text-gradient d-inline">Mon parcours</span></h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
@@ -52,9 +57,9 @@
                                 <h2 class="text-primary fw-bolder mb-0">Expériences</h2>
                                 <!-- Download resume button-->
                                 <!-- Note: Set the link href target to a PDF file within your project-->
-                                <a class="btn btn-primary px-4 py-3" href="#!">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                    Télécharger le résumé
+                                <a class="btn btn-primary px-4 py-3" href="../assets/Apollos_ADINSI-CV.pdf" target="_blank" rel="noopener noreferrer">
+                                    <div class="d-inline-block bi bi-file-earmark-pdf me-2"></div>
+                                    Voir le CV
                                 </a>
                             </div>
                             <!-- Experience Card 1-->
@@ -78,7 +83,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Experience Card 2-->
+                            <!-- Experience Card 4-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2">Février 2025 – Août 2025</div>
+                                                <div class="small fw-bolder">Technicien Informatique et Réseau</div>
+                                                <div class="small text-muted">NPS-GROUP</div>
+                                                <div class="small text-muted">Abomey-Calavi, BENIN</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="text-justify">
+                                                <p>J'ai veillé à un déploiement applicatif, tout en assurant l'installation, la configuration et le support avancé de solutions métiers (ex : Perfecto dans les environnements hospitaliers).</p>
+                                                <p>Maîtrise des architectures LAN, workgroups, configuration IP, diagnostics systèmes, sécurisation des données et optimisation des performances serveurs/postes. Interventions documentées, rapides et orientées fiabilité opérationnelle.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 3-->
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
@@ -99,12 +125,59 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Experience Card 2-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2">Oct. 2024 – Nov. 2024</div>
+                                                <div class="small fw-bolder">Responsable Collecte de Données</div>
+                                                <div class="small text-muted">GID SARL</div>
+                                                <div class="small text-muted">Cotonou, Bénin</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="text-justify">
+                                                <p>À ce poste, je supervise et coordonne la collecte de données terrain afin d'assurer la qualité et la fiabilité des informations nécessaires au développement du système de suivi-évaluation du Ministère du Cadre de Vie. Mon objectif est clair : garantir des données structurées, précises et exploitables pour permettre aux équipes techniques de concevoir un outil performant et adapté aux besoins métier.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                         <!-- Education Section-->
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-danger fw-bolder mb-0">Cursus Scolaire</h2>
                             </div>
+                            <!-- Education Card 2-->
+                            <div class="card shadow border-0 rounded-4 mb-5 education-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-danger fw-bolder mb-2">2019 - 2023</div>
+                                                <div class="mb-2">
+                                                    <div class="small fw-bolder">Institut CERCO</div>
+                                                    <div class="small text-muted">Cotonou, BENIN</div>
+                                                </div>
+                                                <div class="fst-italic">
+                                                    <div class="small text-muted">Informatique Industrielle et Maintenance (2IM)</div>
+                                                    <div class="small text-muted">Developpeur Full Stack et Technicien IoTs</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="text-justify">
+                                                <p>À l'Institut CERCO de Cotonou, j'ai acquis une double compétence en développement Full Stack (frontend/backend/bases de données) et technologies IoT (systèmes embarqués, réseaux industriels).</p>
+                                                <p>Cette formation pratique m'a permis de maîtriser l'intégration système et de développer des architectures connectées innovantes, combinant solutions logicielles et matérielles.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Education Card 1-->
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
@@ -131,33 +204,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Education Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5" style="margin-top: 50px;">
-                                <div class="card-body p-5">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-danger fw-bolder mb-2">2019 - 2023</div>
-                                                <div class="mb-2">
-                                                    <div class="small fw-bolder">Institut CERCO</div>
-                                                    <div class="small text-muted">Cotonou, BENIN</div>
-                                                </div>
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">Informatique Industrielle et Maintenance (2IM)</div>
-                                                    <div class="small text-muted">Developpeur Full Stack et Technicien IoTs</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="text-justify">
-                                                <p>À l'Institut CERCO de Cotonou, j'ai acquis une double compétence en développement Full Stack (frontend/backend/bases de données) et technologies IoT (systèmes embarqués, réseaux industriels).</p>
-                                                <p>Cette formation pratique m'a permis de maîtriser l'intégration système et de développer des architectures connectées innovantes, combinant solutions logicielles et matérielles.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </section>
                         <!-- Divider-->
                         <div class="pb-5"></div>
@@ -169,43 +215,125 @@
                                     <!-- Professional skills list-->
                                     <div class="mb-5">
                                         <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Compétences Professionnelles</span></h3>
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                                <i class="bi bi-tools"></i>
+                                            </div>
+                                            <h3 class="fw-bolder mb-0">
+                                                <span class="text-gradient d-inline">Compétences Professionnelles</span>
+                                            </h3>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Développeur Frontend</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Analyse de données</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Système connecté</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-laptop me-2"></i>
+                                                    Développeur Frontend
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-graph-up me-2"></i>
+                                                    Analyse de données
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-cpu me-2"></i>
+                                                    Système connecté
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Community Manager</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Canva Designer</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Interface Utilisateur Design</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-people me-2"></i>
+                                                    Community Manager
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-palette me-2"></i>
+                                                    Canva Designer
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-window me-2"></i>
+                                                    Interface Utilisateur Design
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- Languages list-->
                                     <div class="mb-0">
                                         <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Outils ou Langages</span></h3>
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                                <i class="bi bi-code-slash"></i>
+                                            </div>
+                                            <h3 class="fw-bolder mb-0">
+                                                <span class="text-gradient d-inline">Outils ou Langages</span>
+                                            </h3>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML/CSS/Tailwind</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Vue.js/React.js</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-filetype-html me-2"></i>
+                                                    HTML/CSS/Tailwind
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-filetype-js me-2"></i>
+                                                    JavaScript
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-react me-2"></i>
+                                                    Vue.js/React.js
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Django</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">API Rest/Flask</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-filetype-py me-2"></i>
+                                                    Python
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-bootstrap me-2"></i>
+                                                    Django
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-cloud me-2"></i>
+                                                    API Rest/Flask
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Arduino/Raspberry Pi</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SQL/NoSQL/PostgreS</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Esp32</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-router me-2"></i>
+                                                    Arduino/Raspberry Pi
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-database me-2"></i>
+                                                    SQL/NoSQL/PostgreS
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                                    <i class="bi bi-cpu-fill me-2"></i>
+                                                    Esp32
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                
                                 </div>
                             </div>
                         </section>
@@ -231,6 +359,70 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script>
+            // Gestion du menu mobile
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Fermer le menu mobile après le clic sur un lien
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+
+            // Ajout d'une classe 'scrolled' à la navbar lors du défilement
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNav');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Animation au défilement
+            document.addEventListener('DOMContentLoaded', function() {
+                // Animation des éléments au chargement
+                const animatedElements = document.querySelectorAll('.animate-fade-in');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-fade-in-visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                animatedElements.forEach(element => {
+                    observer.observe(element);
+                });
+            });
+            (function() {
+                const setActiveNavLink = () => {
+                    const path = window.location.pathname.split('/').pop() || 'index.html';
+                    document.querySelectorAll('.navbar-nav .nav-link').forEach(a => {
+                        const href = a.getAttribute('href');
+                        if (href === path || (path === '' && href === 'index.html')) {
+                            a.classList.add('active');
+                        } else {
+                            a.classList.remove('active');
+                        }
+                    });
+                };
+                setActiveNavLink();
+
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(a => {
+                    a.addEventListener('click', () => {
+                        document.querySelectorAll('.navbar-nav .nav-link').forEach(el => el.classList.remove('active'));
+                        a.classList.add('active');
+                    });
+                });
+            })();
+        </script>
     </body>
 </html>
