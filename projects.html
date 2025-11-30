@@ -27,7 +27,7 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
                 <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand fw-bold" href="index.html">Apollos U. ADINSI</a>
+                    <a class="navbar-brand" href="index.html"><span class="text-gradient d-inline fw-bolder">Apollos U. ADINSI</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
                             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -212,20 +212,30 @@
                 }
             });
 
-            // Animation au défilement
+            // Animation au défilement améliorée
             document.addEventListener('DOMContentLoaded', function() {
-                // Animation des éléments au chargement
-                const animatedElements = document.querySelectorAll('.animate-fade-in');
+                // Animation des éléments au chargement et au scroll
+                const animatedElements = document.querySelectorAll('.card, .btn, section, .animate-on-scroll');
                 
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    entries.forEach((entry, index) => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add('animate-fade-in-visible');
+                            // Délai progressif pour un effet en cascade
+                            setTimeout(() => {
+                                entry.target.classList.add('visible');
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, index * 100);
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.1 });
+                }, { 
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
 
                 animatedElements.forEach(element => {
+                    element.classList.add('animate-on-scroll');
                     observer.observe(element);
                 });
             });

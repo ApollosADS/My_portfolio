@@ -17,13 +17,139 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            .contact-iframe { width: 100%; height: 90vh; min-height: 700px; border: 0; }
-            @media (max-width: 575.98px){ .contact-iframe { height: 90vh; min-height: 650px; } .contact-card { padding: 1rem !important; } }
-            @media (min-width: 576px){ .contact-iframe { height: 95vh; min-height: 800px; } }
-            @media (min-width: 768px){ .contact-iframe { height: 1100px; } }
-            @media (min-width: 992px){ .contact-iframe { height: 1300px; } }
-            @media (min-width: 1200px){ .contact-iframe { height: 1500px; } }
-            @media (min-width: 1400px){ .contact-iframe { height: 1600px; } }
+            .contact-card { 
+                padding: 1.75rem !important; 
+                max-width: 100%;
+            }
+            .form-control:focus {
+                border-color: #0d6efd;
+                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            }
+            
+            /* Responsivité tablette */
+            @media (max-width: 991.98px) {
+                .contact-card { 
+                    padding: 1.5rem !important; 
+                }
+                .contact-card h2 {
+                    font-size: 1.75rem;
+                    margin-bottom: 1.25rem !important;
+                }
+                .contact-card .fs-2 {
+                    font-size: 1.5rem !important;
+                    gap: 1.5rem !important;
+                    margin-bottom: 1.25rem !important;
+                }
+                .mb-4 {
+                    margin-bottom: 1rem !important;
+                }
+                .mb-5 {
+                    margin-bottom: 1.5rem !important;
+                }
+            }
+            
+            /* Responsivité mobile */
+            @media (max-width: 767.98px) {
+                .container.px-5 {
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+                .contact-card { 
+                    padding: 1.25rem !important; 
+                }
+                .contact-card h2 {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem !important;
+                }
+                .contact-card .fs-2 {
+                    font-size: 1.35rem !important;
+                    gap: 1.25rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .form-label {
+                    font-size: 0.9rem;
+                    margin-bottom: 0.4rem;
+                }
+                .form-control-lg {
+                    font-size: 0.95rem;
+                    padding: 0.65rem 0.85rem;
+                }
+                .form-control {
+                    font-size: 0.9rem;
+                }
+                textarea.form-control {
+                    font-size: 0.9rem;
+                    padding: 0.65rem 0.85rem;
+                }
+                .btn-lg {
+                    font-size: 0.95rem;
+                    padding: 0.65rem 1.25rem;
+                }
+                .mb-4 {
+                    margin-bottom: 0.85rem !important;
+                }
+                .mb-5 {
+                    margin-bottom: 1.25rem !important;
+                }
+                .my-4 {
+                    margin-top: 0.75rem !important;
+                    margin-bottom: 0.75rem !important;
+                }
+                .pt-3 {
+                    padding-top: 0.5rem !important;
+                }
+                .hr {
+                    margin: 1rem 0 !important;
+                }
+            }
+            
+            @media (max-width: 575.98px) {
+                .container.px-5 {
+                    padding-left: 0.75rem !important;
+                    padding-right: 0.75rem !important;
+                }
+                .contact-card { 
+                    padding: 1rem !important; 
+                }
+                .contact-card h2 {
+                    font-size: 1.35rem;
+                    margin-bottom: 0.85rem !important;
+                }
+                .contact-card .fs-2 {
+                    font-size: 1.25rem !important;
+                    gap: 1rem !important;
+                    margin-bottom: 0.85rem !important;
+                }
+                .form-label {
+                    font-size: 0.85rem;
+                    margin-bottom: 0.35rem;
+                }
+                .form-control-lg {
+                    font-size: 0.9rem;
+                    padding: 0.6rem 0.75rem;
+                }
+                .form-control {
+                    font-size: 0.85rem;
+                }
+                textarea.form-control {
+                    font-size: 0.85rem;
+                    padding: 0.6rem 0.75rem;
+                }
+                .btn-lg {
+                    font-size: 0.9rem;
+                    padding: 0.6rem 1rem;
+                }
+                .mb-4 {
+                    margin-bottom: 0.75rem !important;
+                }
+                .mb-5 {
+                    margin-bottom: 1rem !important;
+                }
+                .my-4 {
+                    margin-top: 0.5rem !important;
+                    margin-bottom: 0.5rem !important;
+                }
+            }
         </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
@@ -31,7 +157,7 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
                 <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand fw-bold" href="index.html">Apollos U. ADINSI</a>
+                    <a class="navbar-brand" href="index.html"><span class="text-gradient d-inline fw-bolder">Apollos U. ADINSI</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
                             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -53,22 +179,46 @@
                 <div class="container px-5">
                    <!-- Contact form -->
                    <div class="row gx-5 justify-content-center">
-                        <div class="col-12 col-lg-12 col-xl-10">
-                            <div class="bg-white shadow rounded-4 p-4 contact-card">
-                                <h2 class="text-center text-primary fw-bold mb-4">Formulaire de contact</h2>
-                                <div>
-                                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMnClpGu7XtJHGZKzhtD5lws-QIEGlAT_N-dNXdaE_LP84vA/viewform?embedded=true" 
-                                            width="100%" 
-                                            height="1200" 
-                                            frameborder="0" 
-                                            marginheight="0" 
-                                            marginwidth="0" 
-                                            loading="lazy"
-                                            class="contact-iframe"
-                                            title="Formulaire de contact Google">
-                                        Chargement…
-                                    </iframe>
-                                </div>
+                        <div class="col-12 col-lg-8 col-xl-6">
+                            <!-- Boutons de contact rapide -->
+                            <div class="d-flex flex-wrap flex-nowrap justify-content-center align-items-center fs-2 gap-4 mb-4">
+                                <a class="text-gradient animate-scale" href="tel:+2290167926141" aria-label="Appeler">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                                <a class="text-gradient animate-scale" href="https://wa.me/2290167926141" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="bg-white shadow rounded-4 contact-card">
+                                <h2 class="text-center text-primary fw-bold mb-4">Contactez-moi</h2>
+
+                                <hr class="my-4">
+
+                                <!-- Formulaire de contact -->
+                                <form id="contactForm" onsubmit="handleSubmit(event)">
+                                    <div class="mb-4">
+                                        <label for="name" class="form-label fw-semibold">Nom complet <span class="text-danger">*</span></label>
+                                        <input class="form-control form-control-lg" id="name" name="name" type="text" placeholder="Votre nom" required />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                                        <input class="form-control form-control-lg" id="email" name="email" type="email" placeholder="votre@email.com" required />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="subject" class="form-label fw-semibold">Sujet <span class="text-danger">*</span></label>
+                                        <input class="form-control form-control-lg" id="subject" name="subject" type="text" placeholder="Sujet de votre message" required />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="message" class="form-label fw-semibold">Message <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary btn-lg px-5 py-3 animate-on-scroll" type="submit">
+                                            <i class="bi bi-send-fill me-2"></i>Envoyer le message
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -120,21 +270,38 @@
                 }
             });
 
-            // Animation au défilement
+            // Animation au défilement améliorée
             document.addEventListener('DOMContentLoaded', function() {
-                // Animation des éléments au chargement
-                const animatedElements = document.querySelectorAll('.animate-fade-in');
+                // Animation des éléments au chargement et au scroll
+                const animatedElements = document.querySelectorAll('.card, .btn, section, .contact-card, .animate-on-scroll');
                 
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    entries.forEach((entry, index) => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add('animate-fade-in-visible');
+                            // Délai progressif pour un effet en cascade
+                            setTimeout(() => {
+                                entry.target.classList.add('visible');
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, index * 100);
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.1 });
+                }, { 
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
 
                 animatedElements.forEach(element => {
+                    element.classList.add('animate-on-scroll');
                     observer.observe(element);
+                });
+                
+                // Animation des icônes de contact
+                const contactIcons = document.querySelectorAll('.text-gradient');
+                contactIcons.forEach((icon, index) => {
+                    icon.style.animationDelay = `${index * 0.1}s`;
+                    icon.classList.add('animate-scale');
                 });
             });
 
@@ -159,14 +326,59 @@
                     });
                 });
             })();
+
+            // Gestion du formulaire mailto
+            function handleSubmit(event) {
+                if (event) {
+                    event.preventDefault();
+                }
+                
+                try {
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subject = document.getElementById('subject').value.trim();
+                    const message = document.getElementById('message').value.trim();
+                    
+                    // Vérification que tous les champs sont remplis
+                    if (!name || !email || !subject || !message) {
+                        alert('Veuillez remplir tous les champs obligatoires.');
+                        return false;
+                    }
+                    
+                    // Construction du corps de l'email
+                    const emailBody = `Bonjour,\n\n${message}\n\nCordialement,\n${name}\n${email}`;
+                    
+                    // Construction du lien mailto avec encodage URL
+                    const mailtoLink = `mailto:apollosulrich@mail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                    
+                    // Tentative d'ouverture du client de messagerie
+                    const mailtoWindow = window.open(mailtoLink, '_self');
+                    
+                    // Si window.open ne fonctionne pas, utiliser window.location.href
+                    if (!mailtoWindow) {
+                        window.location.href = mailtoLink;
+                    }
+                    
+                    // Réinitialiser le formulaire après un court délai
+                    setTimeout(function() {
+                        document.getElementById('contactForm').reset();
+                    }, 1000);
+                    
+                    return false;
+                } catch (error) {
+                    console.error('Erreur lors de l\'envoi du formulaire:', error);
+                    alert('Une erreur est survenue. Veuillez réessayer ou contactez directement à apollosulrich@mail.com');
+                    return false;
+                }
+            }
+            
+            // Ajouter un gestionnaire d'événement au formulaire au chargement de la page
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('contactForm');
+                if (form) {
+                    form.addEventListener('submit', handleSubmit);
+                }
+            });
         </script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Pour activer ce formulaire, inscrivez-vous sur                         * *-->
-        <!-- * * https://startbootstrap.com/solution/contact-forms et suivez les        * *-->
-        <!-- * * instructions pour obtenir votre clé API. Ensuite, remplacez le script  * *-->
-        <!-- * * ci-dessous avec celui fourni par StartBootstrap.                       * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

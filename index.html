@@ -16,13 +16,18 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            h1, h2 {
+                margin-top: 0.5rem !important;
+            }
+        </style>
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
                 <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand fw-bold" href="index.html">Apollos U. ADINSI</a>
+                    <a class="navbar-brand" href="index.html"><span class="text-gradient d-inline fw-bolder">Apollos U. ADINSI</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
                             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -46,12 +51,12 @@
                         <div class="col-xxl-5">
                             <!-- Header text content-->
                             <div class="text-center text-xxl-start">
-                                <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Developpeur Fullstack &middot; IoTs &middot; Designer</div></div>
-                                <div class="fs-3 fw-light text-muted">Je pourrais vous être utile !</div>
-                                <h1 class="display-4 fw-bolder mb-4"><span class="text-gradient d-inline">Bienvenue sur mon Portfolio</span></h1>
+                                <div class="badge bg-gradient-primary-to-secondary text-white mb-4 animate-fade-down"><div class="text-uppercase">Developpeur Fullstack &middot; IoTs &middot; Designer</div></div>
+                                <div class="fs-3 fw-light text-muted animate-fade-up">Je pourrais vous être utile !</div>
+                                <h1 class="display-4 fw-bolder mb-4 animate-fade-up"><span class="text-gradient d-inline">Bienvenue sur mon Portfolio</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Parcours</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">projets</a>
+                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder animate-on-scroll" href="resume.html">Parcours</a>
+                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder animate-on-scroll" href="projects.html">projets</a>
                                 </div>
                             </div>
                         </div>
@@ -181,20 +186,20 @@
                 </div>
             </header>
             <!-- About Section-->
-            <section class="bg-light py-5">
+            <section class="bg-light py-5 animate-on-scroll">
                 <div class="container px-5">
                     <div class="row gx-5 justify-content-center">
                         <div class="col-xxl-8">
-                            <div class="text-center my-5">
-                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Qui suis-je ?</span></h2>
+                            <div class="text-center my-3">
+                                <h2 class="display-5 fw-bolder animate-on-scroll"><span class="text-gradient d-inline">Qui suis-je ?</span></h2>
                                 <p class="lead fw-light mb-4">Je réponds au nom de Apollos Ulrich M. ADINSI </p>
                                 <p class="text-muted">Passionné par les solutions connectées, je combine développement web (JavaScript/ React, vue.js, APIs REST) et expertise IoT (prototypage Arduino/Raspberry Pi, communication Esp32, Python/C++) pour créer des systèmes complets et innovants. Polyvalent et rigoureux, j'applique les bonnes pratiques (code propre, tests automatisés, architectures modulaires) aussi bien dans le développement d'interfaces responsives que dans la mise en œuvre de solutions matérielles intelligentes.</p>
                                 <p class="text-muted">Je suis disponible pour des missions freelance, collaborations ou CDI pour mettre mes compétences polyvalentes au service de projets ambitieux à l'intersection du web et des objets connectés.</p>
-                                <div class="d-flex justify-content-center fs-2 gap-4">
-                                    <a class="text-gradient" href="https://www.linkedin.com/in/apollos-adinsi" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
-                                    <a class="text-gradient" href="https://github.com/ApollosADS" aria-label="GitHub Profile"><i class="bi bi-github"></i></a>
-                                    <a class="text-gradient" href="https://x.com/@UApollos" aria-label="Twitter Profile"><i class="bi bi-twitter"></i></a>
-                                    <a class="text-gradient" href="https://www.facebook.com/@mrapollos.ADS" aria-label="Facebook Profile"><i class="bi bi-facebook"></i></a>
+                                <div class="d-flex flex-wrap flex-nowrap justify-content-center align-items-center fs-2 gap-3 gap-md-4">
+                                    <a class="text-gradient animate-scale" href="https://www.linkedin.com/in/apollos-adinsi" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+                                    <a class="text-gradient animate-scale" href="https://github.com/ApollosADS" aria-label="GitHub Profile"><i class="bi bi-github"></i></a>
+                                    <a class="text-gradient animate-scale" href="https://x.com/@UApollos" aria-label="Twitter Profile"><i class="bi bi-twitter"></i></a>
+                                    <a class="text-gradient animate-scale" href="https://www.facebook.com/@mrapollos.ADS" aria-label="Facebook Profile"><i class="bi bi-facebook"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -246,21 +251,38 @@
                 }
             });
 
-            // Animation au défilement
+            // Animation au défilement améliorée
             document.addEventListener('DOMContentLoaded', function() {
-                // Animation des éléments au chargement
-                const animatedElements = document.querySelectorAll('.animate-fade-in');
+                // Animation des éléments au chargement et au scroll
+                const animatedElements = document.querySelectorAll('.card, .btn, section, header, .animate-on-scroll');
                 
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    entries.forEach((entry, index) => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add('animate-fade-in-visible');
+                            // Délai progressif pour un effet en cascade
+                            setTimeout(() => {
+                                entry.target.classList.add('visible');
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, index * 100);
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.1 });
+                }, { 
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
 
                 animatedElements.forEach(element => {
+                    element.classList.add('animate-on-scroll');
                     observer.observe(element);
+                });
+                
+                // Animation des icônes de réseaux sociaux
+                const socialIcons = document.querySelectorAll('.text-gradient');
+                socialIcons.forEach((icon, index) => {
+                    icon.style.animationDelay = `${index * 0.1}s`;
+                    icon.classList.add('animate-scale');
                 });
             });
 
